@@ -16,6 +16,7 @@ requiredEnv.forEach(key => {
 });
 const rateLimit = require("express-rate-limit");
 const app = express();
+app.set('trust proxy', 1);
 const upload = multer({
   storage: multer.memoryStorage(),
   limits: {
