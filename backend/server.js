@@ -74,16 +74,29 @@ function normalizeEndpoint(endpoint) {
 // =======================
 app.post('/api/process-document', upload.single('file'), async (req, res) => {
   try {
+
     if (!req.file) {
-      return res.status(400).json({ error: 'No file uploaded' });
+      return res.status(400).json({
+        error: 'No file uploaded'
+      });
     }
 
-    console.log('📄 Processing:', req.file.originalname);
+    if (
+      !process.env.AZURE_DOC_INTELLIGENCE_ENDPOINT ||
+      !process.env.AZURE_DOC_INTELLIGENCE_KEY ||
+      !process.env.OPENAI_API_KEY
+    ) {
+      return res.status(503).json({
+        error: "AI services are not configured yet. Please contact the administrator."
+      });
+    }
 
     const extractedText = await extractTextFromDocument(req.file);
 
     if (!extractedText || !extractedText.trim()) {
-      return res.status(400).json({ error: 'No text extracted' });
+      return res.status(400).json({
+        error: 'No text extracted'
+      });
     }
 
     const analysis = await analyzeDocument(extractedText);
@@ -96,12 +109,12 @@ app.post('/api/process-document', upload.single('file'), async (req, res) => {
 
   } catch (err) {
     console.error('❌ Processing error:', err.message);
+
     res.status(500).json({
-  error: "Document processing failed"
-});
+      error: "Document processing failed"
+    });
   }
 });
-
 // =======================
 // Azure Document Intelligence (READ)
 // =======================
@@ -110,7 +123,6 @@ async function extractTextFromDocument(file) {
     const endpoint = normalizeEndpoint(process.env.AZURE_DOC_INTELLIGENCE_ENDPOINT);
     const key = process.env.AZURE_DOC_INTELLIGENCE_KEY;
 
-    console.log('🔍 Azure Endpoint:', endpoint);
     console.log('Azure configuration loaded');
 
     if (!endpoint || !key) {
