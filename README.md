@@ -246,7 +246,7 @@ Ensure you have the following installed and configured:
 ### 1. Clone the Repository
 
 ```bash
-git clone git clone https://github.com/sammysamad402/docugenius.git
+git clone https://github.com/sammysamad402/docugenius.git
 cd docugenius
 ```
 
@@ -296,13 +296,32 @@ PORT=5000
 ### `frontend/.env`
 
 ```env
-# Backend API URL
+# Local Development
 REACT_APP_API_URL=http://localhost:5000
 ```
 
-> [!WARNING]
-> **Never commit `.env` files to version control.** Both files are already listed in `.gitignore`. Always use `.env.example` as a safe template to share with collaborators.
+---
 
+### Production Deployment
+
+#### Vercel Environment Variables
+
+```env
+REACT_APP_API_URL=https://docugenius-production.up.railway.app
+```
+
+#### Railway Environment Variables
+
+```env
+AZURE_DOC_INTELLIGENCE_ENDPOINT=your_endpoint
+AZURE_DOC_INTELLIGENCE_KEY=your_key
+OPENAI_API_KEY=your_key
+FRONTEND_URL=https://docugenius-chi.vercel.app
+```
+
+> ⚠️ Never commit `.env` files to GitHub.
+>
+> Use `.env.example` files as templates and configure secrets through the Vercel and Railway dashboards.
 ---
 
 ## ▶️ Running the App
