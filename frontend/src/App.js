@@ -44,7 +44,7 @@ function App() {
     if (!file) return;
 
     // Check file type
-    const validTypes = ['image/jpeg', 'image/jpg', 'image/png', 'image/gif', 'application/pdf'];
+    const validTypes = ['image/jpeg', 'image/jpg', 'image/png', 'application/pdf'];
     if (!validTypes.includes(file.type)) {
       showNotification('Please upload an image (JPG, PNG, GIF) or PDF file', 'error');
       return;
