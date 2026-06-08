@@ -3,16 +3,52 @@ const cors = require('cors');
 const multer = require('multer');
 const axios = require('axios');
 require('dotenv').config();
+const requiredEnv = [
+  "AZURE_DOC_INTELLIGENCE_ENDPOINT",
+  "AZURE_DOC_INTELLIGENCE_KEY",
+  "OPENAI_API_KEY"
+];
 
+requiredEnv.forEach(key => {
+  if (!process.env[key]) {
+    console.warn(`Missing environment variable: ${key}`);
+  }
+});
+const rateLimit = require("express-rate-limit");
 const app = express();
-const upload = multer({ storage: multer.memoryStorage() });
+const upload = multer({
+  storage: multer.memoryStorage(),
+  limits: {
+    fileSize: 10 * 1024 * 1024
+  },
+  fileFilter: (req, file, cb) => {
+    const allowedTypes = [
+      "application/pdf",
+      "image/jpeg",
+      "image/png"
+    ];
+
+    if (allowedTypes.includes(file.mimetype)) {
+      cb(null, true);
+    } else {
+      cb(new Error("Only PDF, JPG, PNG files allowed"));
+    }
+  }
+});
 
 // =======================
 // Middleware
 // =======================
-app.use(cors());
+app.use(cors({
+  origin: process.env.FRONTEND_URL || "*"
+}));
 app.use(express.json());
+const limiter = rateLimit({
+  windowMs: 15 * 60 * 1000,
+  max: 30
+});
 
+app.use(limiter);
 // =======================
 // Health check
 // =======================
@@ -59,7 +95,9 @@ app.post('/api/process-document', upload.single('file'), async (req, res) => {
 
   } catch (err) {
     console.error('❌ Processing error:', err.message);
-    res.status(500).json({ error: err.message });
+    res.status(500).json({
+  error: "Document processing failed"
+});
   }
 });
 
@@ -72,7 +110,7 @@ async function extractTextFromDocument(file) {
     const key = process.env.AZURE_DOC_INTELLIGENCE_KEY;
 
     console.log('🔍 Azure Endpoint:', endpoint);
-    console.log('🔑 Key length:', key?.length);
+    console.log('Azure configuration loaded');
 
     if (!endpoint || !key) {
       throw new Error('Azure endpoint or key missing');
@@ -180,7 +218,25 @@ JSON format:
       }
     );
 
-    return JSON.parse(response.data.choices[0].message.content);
+    let content =
+  response.data.choices[0].message.content;
+
+content = content
+  .replace(/```json/g, "")
+  .replace(/```/g, "")
+  .trim();
+
+try {
+  return JSON.parse(content);
+} catch {
+  return {
+    type: "Other",
+    category: "Business",
+    keyInfo: {},
+    summary: "Unable to parse AI response",
+    tags: []
+  };
+}
 
   } catch (err) {
     console.error('🤖 OpenAI error:', err.response?.data || err.message);
