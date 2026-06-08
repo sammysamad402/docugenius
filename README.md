@@ -1,18 +1,41 @@
 <div align="center">
 
-# ✨ DocuGenius
+<br />
 
-### AI-Powered Document Intelligence
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0078D4,100:412991&height=200&section=header&text=DocuGenius&fontSize=72&fontColor=ffffff&fontAlignY=38&desc=AI-Powered%20Document%20Intelligence%20Platform&descAlignY=58&descSize=20" alt="DocuGenius Banner" width="100%" />
 
-[![Microsoft Imagine Cup 2026](https://img.shields.io/badge/Microsoft-Imagine%20Cup%202026-0078D4?style=for-the-badge&logo=microsoft&logoColor=white)](https://imaginecup.microsoft.com/)
-[![React](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
-[![Azure AI](https://img.shields.io/badge/Azure-Document%20Intelligence-0078D4?style=for-the-badge&logo=microsoftazure&logoColor=white)](https://azure.microsoft.com/en-us/products/ai-services/ai-document-intelligence)
-[![OpenAI](https://img.shields.io/badge/OpenAI-GPT--4o--mini-412991?style=for-the-badge&logo=openai&logoColor=white)](https://openai.com/)
-[![Node.js](https://img.shields.io/badge/Node.js-Express-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)](https://nodejs.org/)
+<br />
 
-**Upload any document. Get instant AI-powered analysis, classification, and key information extraction.**
+<p align="center">
+  <a href="https://docugenius-chi.vercel.app" target="_blank">
+    <img src="https://img.shields.io/badge/🚀%20Live%20Demo-Visit%20Now-0078D4?style=for-the-badge&logoColor=white" alt="Live Demo" />
+  </a>
+  &nbsp;
+  <a href="https://imaginecup.microsoft.com/" target="_blank">
+    <img src="https://img.shields.io/badge/Microsoft-Imagine%20Cup%202026-0078D4?style=for-the-badge&logo=microsoft&logoColor=white" alt="Imagine Cup 2026" />
+  </a>
+</p>
 
-[Report Bug](../../issues) · [Request Feature](../../issues)
+<p align="center">
+  <img src="https://img.shields.io/badge/React-19-61DAFB?style=flat-square&logo=react&logoColor=black" alt="React 19" />
+  <img src="https://img.shields.io/badge/Node.js-Express-339933?flat-square&logo=nodedotjs&logoColor=white" alt="Node.js" />
+  <img src="https://img.shields.io/badge/Azure-Document%20Intelligence-0078D4?flat-square&logo=microsoftazure&logoColor=white" alt="Azure AI" />
+  <img src="https://img.shields.io/badge/OpenAI-GPT--4o--mini-412991?flat-square&logo=openai&logoColor=white" alt="OpenAI" />
+  <img src="https://img.shields.io/badge/Deployed-Vercel%20%2B%20Railway-black?flat-square&logo=vercel&logoColor=white" alt="Deployment" />
+  <img src="https://img.shields.io/badge/License-MIT-green?flat-square" alt="MIT License" />
+</p>
+
+<br />
+
+> **Upload any document. Understand it instantly.**
+>
+> DocuGenius uses Azure AI OCR and OpenAI GPT-4o-mini to classify, extract, and summarize receipts, invoices, contracts, medical records, IDs, and more — with zero manual data entry.
+
+<br />
+
+**[🌐 Live Demo](https://docugenius-chi.vercel.app)** &nbsp;·&nbsp; **[🐛 Report Bug](../../issues)** &nbsp;·&nbsp; **[✨ Request Feature](../../issues)**
+
+<br />
 
 </div>
 
@@ -20,53 +43,163 @@
 
 ## 📋 Table of Contents
 
-- [About](#-about)
-- [Features](#-features)
-- [Tech Stack](#-tech-stack)
-- [Project Structure](#-project-structure)
-- [Getting Started](#-getting-started)
-- [Running the App](#-running-the-app)
-- [How It Works](#-how-it-works)
-- [Roadmap](#-roadmap)
+- [🎯 About the Project](#-about-the-project)
+- [✨ Features](#-features)
+- [🏗 System Architecture](#-system-architecture)
+- [🛠 Tech Stack](#-tech-stack)
+- [📁 Project Structure](#-project-structure)
+- [🚀 Getting Started](#-getting-started)
+- [⚙️ Environment Variables](#️-environment-variables)
+- [▶️ Running the App](#️-running-the-app)
+- [📡 API Endpoints](#-api-endpoints)
+- [☁️ Deployment Architecture](#️-deployment-architecture)
+- [🔒 Security & Production Features](#-security--production-features)
+- [🖼 Screenshots](#-screenshots)
+- [🗺 Roadmap](#-roadmap)
+- [🤝 Contributing](#-contributing)
+- [📄 License](#-license)
 
 ---
 
-## 🧠 About
+## 🎯 About the Project
 
-DocuGenius is an AI-powered document management app built for **Microsoft Imagine Cup 2026**. Upload photos or scans of physical documents — receipts, bills, medical records, contracts, IDs — and instantly receive structured analysis powered by **Microsoft Azure AI Document Intelligence** and **OpenAI GPT-4o-mini**.
+**DocuGenius** is a full-stack AI document intelligence platform built for **Microsoft Imagine Cup 2026**. It solves a universal problem: physical and digital paperwork is hard to organize, search, and understand.
 
-No manual data entry. No lost paperwork. Just upload and understand.
+With DocuGenius, users simply upload a photo or scan of any document — a hospital bill, a rent agreement, a tax form, a business invoice — and receive a fully structured analysis in seconds:
+
+- ✅ What kind of document is this?
+- ✅ What are the key figures, dates, and parties involved?
+- ✅ What is a plain-English summary?
+- ✅ What tags make it searchable?
+
+No manual entry. No lost documents. Pure intelligence.
 
 ---
 
 ## ✨ Features
 
-| Feature | Description |
-|---|---|
-| 📤 Smart Upload | JPG, PNG, or PDF — up to 10MB |
-| 🔍 OCR Extraction | Azure reads text from any document, even handwritten |
-| 🤖 AI Classification | Auto-categorizes: Financial, Medical, Legal, Personal, Business |
-| 📊 Key Info Extraction | Pulls dates, amounts, vendors, and critical fields |
-| 🏷️ Auto-Tagging | Generates relevant tags for easy searchability |
-| 🔎 Full-Text Search | Search across all documents instantly |
-| 📁 Category Filters | Browse by tab: Financial, Medical, Legal, Personal |
-| 📥 Export Reports | Download a formatted `.txt` report for any document |
-| 💾 Persistent Storage | Documents saved to localStorage between sessions |
-| 📱 Responsive | Works on mobile and desktop |
+<table>
+<tr>
+<td width="50%">
+
+### 📤 Document Ingestion
+- Upload **JPG, PNG, or PDF** files (up to 10MB)
+- Instant client-side file validation
+- Document preview before and after analysis
+- Drag-and-drop friendly interface
+
+</td>
+<td width="50%">
+
+### 🔍 AI-Powered Analysis
+- **Azure AI OCR** extracts text from any document, including handwritten content
+- **GPT-4o-mini** classifies, summarizes, and extracts structured data
+- Handles real-world, imperfect scans gracefully
+
+</td>
+</tr>
+<tr>
+<td width="50%">
+
+### 🏷 Smart Organization
+- Auto-categorization: **Financial, Medical, Legal, Personal, Business**
+- Auto-generated **searchable tags**
+- Key field extraction: dates, amounts, vendors, parties
+- Full-text search across all documents
+
+</td>
+<td width="50%">
+
+### 📊 Management & Export
+- **Persistent storage** between sessions
+- Category filter tabs for fast browsing
+- **Export to `.txt` report** for any document
+- Mobile-responsive design
+
+</td>
+</tr>
+</table>
+
+---
+
+## 🏗 System Architecture
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│                        USER BROWSER                         │
+│                                                             │
+│   User uploads document (JPG / PNG / PDF)                   │
+└────────────────────────────┬────────────────────────────────┘
+                             │ HTTPS Request (multipart/form-data)
+                             ▼
+┌─────────────────────────────────────────────────────────────┐
+│              REACT 19 FRONTEND  ·  Vercel CDN               │
+│                                                             │
+│   • File validation & preview                               │
+│   • Upload progress UI                                      │
+│   • Document gallery with search & filters                  │
+│   • Export & reporting interface                            │
+└────────────────────────────┬────────────────────────────────┘
+                             │ REST API Call
+                             ▼
+┌─────────────────────────────────────────────────────────────┐
+│            EXPRESS.JS BACKEND  ·  Railway Cloud             │
+│                                                             │
+│   • Multer: multipart file handling                         │
+│   • File type & size validation                             │
+│   • CORS, rate limiting, error handling                     │
+└──────────────┬──────────────────────────┬───────────────────┘
+               │                          │
+               ▼                          ▼
+┌──────────────────────┐    ┌─────────────────────────────────┐
+│  AZURE AI DOCUMENT   │    │        OPENAI GPT-4o-mini        │
+│   INTELLIGENCE       │    │                                  │
+│                      │    │  • Document classification       │
+│  • OCR text extract  │───▶│  • Key info extraction           │
+│  • Prebuilt-read     │    │  • Plain-English summary         │
+│    model             │    │  • Auto-tagging                  │
+│  • Handles scans +   │    │  • Structured JSON output        │
+│    handwriting       │    │                                  │
+└──────────────────────┘    └─────────────────┬───────────────┘
+                                              │
+                                              ▼
+                             ┌────────────────────────────────┐
+                             │      STRUCTURED JSON RESPONSE  │
+                             │                                │
+                             │  {                             │
+                             │    type: "Invoice",            │
+                             │    category: "Financial",      │
+                             │    keyInfo: {                  │
+                             │      date, amount, vendor      │
+                             │    },                          │
+                             │    summary: "...",             │
+                             │    tags: ["invoice", ...]      │
+                             │  }                             │
+                             └────────────────┬───────────────┘
+                                              │
+                                              ▼
+                             ┌────────────────────────────────┐
+                             │    FRONTEND VISUALIZATION      │
+                             │    & PERSISTENT STORAGE        │
+                             └────────────────────────────────┘
+```
 
 ---
 
 ## 🛠 Tech Stack
 
-| Layer | Technology |
-|---|---|
-| **Frontend** | React 19, Lucide React Icons |
-| **Backend** | Node.js, Express 5 |
-| **OCR / Document AI** | Azure AI Document Intelligence (prebuilt-read model) |
-| **AI Analysis** | OpenAI GPT-4o-mini |
-| **File Handling** | Multer (multipart uploads) |
-| **HTTP Client** | Axios |
-| **Styling** | Custom CSS with animations |
+| Layer | Technology | Purpose |
+|---|---|---|
+| **Frontend** | React 19 | UI framework with hooks and component architecture |
+| **Icons** | Lucide React | Consistent, minimal icon set |
+| **Backend** | Node.js + Express 5 | REST API server and middleware orchestration |
+| **OCR** | Azure AI Document Intelligence | Text extraction from images and PDFs |
+| **AI Analysis** | OpenAI GPT-4o-mini | Document classification, summarization, key info extraction |
+| **File Handling** | Multer | Multipart form-data upload processing |
+| **HTTP Client** | Axios | Frontend → backend API communication |
+| **Frontend Deploy** | Vercel | Global CDN, zero-config CI/CD |
+| **Backend Deploy** | Railway | Managed cloud Node.js hosting |
+| **Styling** | Custom CSS | Animations, responsive layout, dark-mode ready |
 
 ---
 
@@ -74,30 +207,26 @@ No manual data entry. No lost paperwork. Just upload and understand.
 
 ```
 docugenius/
+│
 ├── README.md
 ├── .gitignore
 ├── LICENSE
 │
-├── backend/                      # Express API server
-│   ├── server.js                 # All API routes + Azure + OpenAI logic
+├── backend/                          # Express API server
+│   ├── server.js                     # All API routes, Azure + OpenAI integration
 │   ├── package.json
-│   └── .env.example              # Environment variable template
+│   └── .env.example                  # Environment variable template
 │
-└── frontend/                     # React application
+└── frontend/                         # React 19 SPA
     ├── public/
     │   ├── index.html
     │   ├── manifest.json
     │   └── robots.txt
-    ├── src/
-    │   ├── App.js                # Main application component
-    │   ├── App.css               # Styles and animations
-    │   ├── App.test.js
-    │   ├── index.js              # React entry point
-    │   ├── index.css
-    │   ├── reportWebVitals.js
-    │   └── setupTests.js
-    ├── package.json
-    └── .env.example
+    └── src/
+        ├── App.js                    # Root component: state, routing, API calls
+        ├── App.css                   # Global styles and animations
+        ├── index.js                  # React entry point
+        └── index.css                 # Base styles
 ```
 
 ---
@@ -106,131 +235,288 @@ docugenius/
 
 ### Prerequisites
 
-- [Node.js](https://nodejs.org/) v18+
-- An [Azure account](https://azure.microsoft.com/free/) with a Document Intelligence resource (Free tier F0 available)
-- An [OpenAI API key](https://platform.openai.com/api-keys)
+Ensure you have the following installed and configured:
 
-### 1. Clone the repo
+| Requirement | Version | Notes |
+|---|---|---|
+| [Node.js](https://nodejs.org/) | v18+ | LTS recommended |
+| [Azure Account](https://azure.microsoft.com/free/) | — | Free tier F0 available |
+| [OpenAI API Key](https://platform.openai.com/api-keys) | — | Pay-as-you-go |
+
+### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/docugenius.git
+git clone git clone https://github.com/sammysamad402/docugenius.git
 cd docugenius
 ```
 
-### 2. Set up the backend
+### 2. Backend Setup
 
 ```bash
 cd backend
 npm install
 cp .env.example .env
-# Edit .env and fill in your Azure + OpenAI keys
+# Open .env and fill in your Azure and OpenAI credentials
 ```
 
-### 3. Set up the frontend
+### 3. Frontend Setup
 
 ```bash
 cd ../frontend
 npm install
 cp .env.example .env
-# Edit .env if your backend runs on a different port
+# Set REACT_APP_API_URL if your backend runs on a non-default port
 ```
 
-### Environment Variables
+### 4. Get Your Azure Credentials
 
-**`backend/.env`**
+1. Log in to the [Azure Portal](https://portal.azure.com)
+2. Create a **Document Intelligence** resource (Free tier F0 is sufficient)
+3. Navigate to **Keys and Endpoint** under your resource
+4. Copy **Endpoint URL** and **Key 1**
+
+---
+
+## ⚙️ Environment Variables
+
+### `backend/.env`
+
 ```env
+# Azure AI Document Intelligence
 AZURE_DOC_INTELLIGENCE_ENDPOINT=https://your-resource.cognitiveservices.azure.com
 AZURE_DOC_INTELLIGENCE_KEY=your_azure_key_here
+
+# OpenAI
 OPENAI_API_KEY=sk-your_openai_api_key_here
+
+# Server
 PORT=5000
 ```
 
-**`frontend/.env`**
+### `frontend/.env`
+
 ```env
+# Backend API URL
 REACT_APP_API_URL=http://localhost:5000
 ```
 
-> ⚠️ Never commit `.env` files. They are blocked by `.gitignore`.
-
-**How to get Azure credentials:**
-1. Go to [Azure Portal](https://portal.azure.com)
-2. Create a **Document Intelligence** resource
-3. Go to **Keys and Endpoint** under your resource
-4. Copy **Endpoint** and **Key 1**
+> [!WARNING]
+> **Never commit `.env` files to version control.** Both files are already listed in `.gitignore`. Always use `.env.example` as a safe template to share with collaborators.
 
 ---
 
 ## ▶️ Running the App
 
-**Terminal 1 — Start backend:**
+**Terminal 1 — Backend:**
+
 ```bash
 cd backend
 npm start
-# Runs at http://localhost:5000
+# API running at http://localhost:5000
 # Health check: http://localhost:5000/api/health
 ```
 
-**Terminal 2 — Start frontend:**
+**Terminal 2 — Frontend:**
+
 ```bash
 cd frontend
 npm start
-# Opens at http://localhost:3000
+# App opens at http://localhost:3000
 ```
 
 ---
 
-## ⚙️ How It Works
+## 📡 API Endpoints
+
+Base URL (Production): `https://docugenius-production.up.railway.app`
+
+| Method | Endpoint | Description | Auth |
+|---|---|---|---|
+| `GET` | `/api/health` | Server health check | None |
+| `POST` | `/api/process-document` | Upload and analyze a document | None |
+
+### `POST /api/process-document`
+
+**Request:** `multipart/form-data`
+
+| Field | Type | Required | Description |
+|---|---|---|---|
+| `file` | `File` | ✅ | JPG, PNG, or PDF — max 10MB |
+
+**Response:** `application/json`
+
+```json
+{
+  "success": true,
+  "data": {
+    "type": "Invoice",
+    "category": "Financial",
+    "keyInfo": {
+      "date": "2025-11-15",
+      "amount": "$4,200.00",
+      "vendor": "Acme Corp",
+      "additionalFields": {}
+    },
+    "summary": "A vendor invoice from Acme Corp for software licensing services totaling $4,200, dated November 2025 with payment due in 30 days.",
+    "tags": ["invoice", "financial", "acme-corp", "software", "licensing"],
+    "rawText": "..."
+  }
+}
+```
+
+**Error Response:**
+
+```json
+{
+  "success": false,
+  "error": "File type not supported. Please upload JPG, PNG, or PDF."
+}
+```
+
+---
+
+## ☁️ Deployment Architecture
 
 ```
-User uploads document (image or PDF)
-         ↓
-Backend receives file via Express + Multer
-         ↓
-Azure Document Intelligence extracts raw text (OCR)
-         ↓
-Extracted text is sent to OpenAI GPT-4o-mini
-         ↓
-AI returns structured JSON:
-  type, category, keyInfo (date/amount/vendor), summary, tags
-         ↓
-Frontend displays full analysis with document preview
+┌─────────────────────────────────┐    ┌──────────────────────────────────┐
+│         VERCEL (Frontend)       │    │        RAILWAY (Backend)          │
+│                                 │    │                                   │
+│  • Automatic deploys on push    │    │  • Node.js managed runtime        │
+│  • Global CDN distribution      │◀──▶│  • Auto-restarts on crash         │
+│  • HTTPS by default             │    │  • Environment variable vault     │
+│  • Preview deployments per PR   │    │  • Zero-downtime redeploys        │
+│                                 │    │                                   │
+│  URL: docugenius-chi.vercel.app │    │  URL: docugenius-production       │
+│                                 │    │       .up.railway.app             │
+└─────────────────────────────────┘    └──────────────────────────────────┘
 ```
 
-**Supported document types:**
-- 🧾 Bills & Receipts
-- 📄 Invoices
-- 🪪 ID Cards
-- 🏥 Medical Records
-- ⚖️ Legal Contracts
-- 🗂 Tax Documents
-- 🏦 Bank Statements
+### Deployment Steps
+
+**Frontend → Vercel:**
+
+```bash
+# Option 1: Connect GitHub repo to Vercel dashboard (recommended)
+# Option 2: CLI
+npm install -g vercel
+cd frontend
+vercel --prod
+```
+
+**Backend → Railway:**
+
+```bash
+# Option 1: Connect GitHub repo to Railway dashboard (recommended)
+# Option 2: CLI
+npm install -g @railway/cli
+railway login
+cd backend
+railway up
+```
+
+> [!NOTE]
+> Set all environment variables via the respective platform dashboards (Vercel → Project Settings → Environment Variables; Railway → Variables tab). Never expose secrets in code or deployment configs.
+
+---
+
+## 🔒 Security & Production Features
+
+| Feature | Implementation |
+|---|---|
+| 🔑 **Secret Management** | All API keys stored in environment variables, never in source code |
+| 📁 **File Validation** | Server-side MIME type and extension checks before processing |
+| 📏 **Upload Limits** | Max 10MB per file enforced by Multer middleware |
+| 🌐 **CORS Configuration** | Restricted to trusted origins only |
+| 🚦 **Rate Limiting** | Per-IP request throttling on the `/api/process-document` route |
+| 🛡 **Input Sanitization** | Filename and content validation prior to Azure submission |
+| 🔐 **HTTPS Everywhere** | Enforced by Vercel (frontend) and Railway (backend) by default |
+| 🗑 **Temp File Cleanup** | Uploaded files purged from server memory after processing |
+
+---
+
+## 🖼 Screenshots
+
+> Screenshots and demo GIF coming soon. A live demo is available at [docugenius-chi.vercel.app](https://docugenius-chi.vercel.app).
+
+| Upload Interface | Analysis Results | Document Gallery |
+|:---:|:---:|:---:|
+| _(screenshot placeholder)_ | _(screenshot placeholder)_ | _(screenshot placeholder)_ |
+
+<!-- To add screenshots:
+1. Create a /docs/screenshots/ folder
+2. Replace the placeholders above with:
+   ![Upload Interface](docs/screenshots/upload.png)
+-->
 
 ---
 
 ## 🗺 Roadmap
 
-- [x] OCR text extraction via Azure AI
-- [x] AI document classification and analysis
-- [x] Full-text search and category filters
-- [x] Export to text report
-- [ ] Cloud sync via Azure Blob Storage
-- [ ] Multi-language document support
-- [ ] Batch upload mode
-- [ ] Email/WhatsApp document ingestion
-- [ ] Expense analytics dashboard
+### ✅ Completed (v1.0)
+
+- [x] OCR text extraction via Azure AI Document Intelligence
+- [x] AI document classification and structured data extraction
+- [x] Full-text search and category filter tabs
+- [x] Auto-tagging and key info (date, amount, vendor) extraction
+- [x] Export document analysis to `.txt` report
+- [x] Persistent localStorage across sessions
+- [x] Deployed to Vercel (frontend) and Railway (backend)
+- [x] Mobile-responsive UI
+
+### 🔜 Planned (v2.0)
+
+- [ ] ☁️ Cloud sync via Azure Blob Storage
+- [ ] 🌍 Multi-language document support
+- [ ] 📦 Batch upload and processing mode
+- [ ] 📧 Email / WhatsApp document ingestion pipeline
+- [ ] 📊 Expense analytics dashboard with charts
+- [ ] 🔐 User authentication and personal document vaults
+- [ ] 🤝 Team collaboration and document sharing
+- [ ] 🔔 Smart alerts for expiring documents (contracts, IDs)
+
+---
+
+## 🤝 Contributing
+
+Contributions are what make open source such an incredible place to learn and build. Any contributions you make are **greatly appreciated**.
+
+1. **Fork** the repository
+2. Create your feature branch: `git checkout -b feature/AmazingFeature`
+3. Commit your changes: `git commit -m 'Add AmazingFeature'`
+4. Push to the branch: `git push origin feature/AmazingFeature`
+5. Open a **Pull Request**
+
+Please make sure your PR includes:
+- A clear description of the changes
+- Updated documentation if applicable
+- No committed `.env` files or API keys
 
 ---
 
 ## 📄 License
 
-MIT License — see [LICENSE](LICENSE) for details.
+Distributed under the **MIT License**. See [`LICENSE`](LICENSE) for full details.
 
 ---
 
 <div align="center">
 
+<br />
+
 Built with ❤️ for **Microsoft Imagine Cup 2026**
 
-⭐ Star this repo if you find it useful!
+<br />
+
+<a href="https://docugenius-chi.vercel.app" target="_blank">
+  <img src="https://img.shields.io/badge/🌐%20Live%20Demo-docugenius--chi.vercel.app-0078D4?style=for-the-badge" alt="Live Demo" />
+</a>
+
+<br /><br />
+
+⭐ **If DocuGenius helped or inspired you, please consider starring the repository!** ⭐
+
+<br />
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:412991,100:0078D4&height=100&section=footer" width="100%" />
 
 </div>
