@@ -33,7 +33,7 @@
 
 <br />
 
-**[🌐 Live Demo](https://docugenius-chi.vercel.app)** &nbsp;·&nbsp; **[🐛 Report Bug](../../issues)** &nbsp;·&nbsp; **[✨ Request Feature](../../issues)**
+**[🌐 Live Demo](https://docugenius-chi.vercel.app)** &nbsp;·&nbsp; **[🎨 Behance Case Study](https://www.behance.net/gallery/250843061/DocuGenius-AI-Powered-Document-Intelligence-Platform)** &nbsp;·&nbsp; **[🐛 Report Bug](../../issues)** &nbsp;·&nbsp; **[✨ Request Feature](../../issues)**
 
 <br />
 
@@ -509,6 +509,16 @@ Please make sure your PR includes:
 - A clear description of the changes
 - Updated documentation if applicable
 - No committed `.env` files or API keys
+
+---
+
+### 📖 Detailed Case Study on Behance:
+https://www.behance.net/gallery/250843061/DocuGenius-AI-Powered-Document-Intelligence-Platform
+
+---
+
+### Live Demo:
+https://docugenius-chi.vercel.app
 
 ---
 
